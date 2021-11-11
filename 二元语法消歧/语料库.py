@@ -79,7 +79,6 @@ class Two_Gram():
             one_word_count = self.get_Gram_count(pre_word, self.words_count)
             pro = (two_word_count + 1) / one_word_count
             # 线性插值
-            probility *= lamba * pro
             probility *= (lamba * pro + (1 - lamba) * one_word_count / len(yuliaoku))
 
         return probility
